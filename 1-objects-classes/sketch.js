@@ -48,18 +48,22 @@ class Ball {
 
 if (this.x===800){
   this.speed = -this.speed
+  this.diameter = this.diameter-10
 }
   if (this.x===0){
     this.speed = -this.speed
+    this.diameter = this.diameter-10
 }
 
   this.y = this.y+this.speed;
 
     if (this.y===400){
       this.speed = -this.speed
+      this.diameter = this.diameter-10
 }
       if (this.y===0){
         this.speed = -this.speed
+        this.diameter = this.diameter-10
 
   }
  }
