@@ -4,6 +4,14 @@ let balls = [];
 //create a variable to hold your avatar
 let me;
 
+let mySound;
+
+function preload() {
+  soundFormats('wav', 'ogg');
+  mySound = loadSound('snowball.wav');
+}
+
+
 
 
 function setup() {
@@ -111,6 +119,8 @@ class Ball {
   	bounceBall(){
     		if (this.x >= me.x-15 && this.x <= me.x+15 && this.y > me.y-40 && this.y < me.y+40){
             me.diameter = me.diameter+1
+            mySound.setVolume(0.1);
+            mySound.play();
             // this.speed = -this.speed;
 
     		}
